@@ -8,26 +8,91 @@
 </head>
 
 <style>
-    #coffe {
+    #coffee {
         position: absolute;
         top: 0px;
         left: 0px;
-        min-width: 100%;
-        min-height: 100%;
         width: auto;
         height: auto;
-        z-index: -1000;
+        z-index: -100;
         overflow: hidden;
+        opacity: 0.2;
+    }
+
+    #리커버리 {
+        color: limegreen;
+        text-decoration: none;
+
+    }
+
+    html,
+    body {
+        margin: 0;
+        height: 100%;
+    }
+
+    h1 {
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        border: 1px solid red;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    #grid ul {
+        border-right: 1px solid red;
+        padding-top: 0;
+        padding-right: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    #article {
+        padding: 0;
+        padding-left: 10px;
     }
 </style>
 
 <body>
-    <video id="coffe" src="video/turkish_coffee.mp4" autoplay="true" loop="loop" muted="muted">HTML5 video를 지원하지 않는
+    <video id="coffee" src="video/turkish_coffee.mp4" autoplay="true" loop="loop" muted="muted">HTML5 video를 지원하지 않는
         브라우저 입니다.</video>
-    <h1>목차</h1>
-    <a href="recovery.html">
-        <h2>삼성 리커버리</h2>
-    </a>
+    <h1>도우미</h1>
+    <div id="grid">
+        <ul>
+            <li><a id="리커버리" /*href="recovery.html"*/> <h2>삼성 리커버리</h2>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <h2>인터넷 옵션 설정</h2>
+                </a>
+            </li>
+            <li>
+                <a href="https://docs.google.com/document/d/1S5GAf3Tg40ymd8_9c54RQxLC8fe2NRusZXNPdaJuFQY/edit?usp=sharing" target="_blank">
+                    <h2>ERP 설치 및 삭제</h2>
+                </a>
+            </li>
+        </ul>
+        <div id="article">
+
+
+            <div id="text">
+                <input id='button1' type="button" value="다음">
+                <script src="test.js"></script><br>삼성복원 솔루션은 컴퓨터에 문제가 발생하였을 경우 하드디스크를 복원하거나 백업할 수 있는 프로그램입니다.<br>삼성복원
+                솔루션은 Windows 상태에서뿐만 아니라 Windows로 부팅이 되지 않을 경우에도 사용할 수 있으며, 컴퓨터 부팅이 되지 않을 경우 부팅 초기 화면(삼성문자)에서 F4 키를 눌러
+                복원을 할 수 있습니다.</div>
+        </div>
+    </div>
 </body>
+<!--
+    주석입니다.
+-->
 
 </html>
