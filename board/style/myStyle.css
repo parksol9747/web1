@@ -1,0 +1,71 @@
+form {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	grid-template-areas: "a a" "b c" "b d" "b e";
+	grid-template-rows: 100px 100px 1fr 100px;
+	grid-template-columns: 200px 1fr;
+}
+
+
+.Title, .BoardList, .TextList, .TextTitle, .TextContents {
+	padding: 10px;
+	border: 5px red solid;
+	margin: 5px;
+}
+
+.Title {
+	text-align: center;
+	grid-area: a;
+	display: grid;
+	grid-template-areas: "title_a title_b title_c";
+	grid-template-columns: 100px 1fr 100px;
+}
+
+#Home {
+	grid-area:title_a;
+	background: url('../img.jpg');
+	border: 0px;
+	height: 60px;
+	width: 100px;
+}
+
+#dropbox {
+	grid-area: title_c;
+	height: 60px;
+	width:100px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+#droplist {
+  display: none;
+  position: absolute;
+}
+
+#dropbox:hover #droplist{
+	display: block;
+}
+
+.BoardList {
+	text-align: center;
+	grid-area: b;
+}
+
+.TextTitle {
+	text-align: center;
+	grid-area: c;
+}
+
+.TextContents {
+	text-align: center;
+	grid-area: d;
+	overflow: auto;
+}
+
+.TextList {
+	text-align: center;
+	grid-area: e;
+}
