@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+
+<head>
+<title>Board</title>
+<meta charset="utf-8">
+</head>
+
+<script>
+function init() {
+	console.log("초기화1");
+	gapi.load('auth2', function(){
+		console.log("초기화2");
+		var gauth = gapi.auth2.init({
+			client_id : "178439367580-l0oj544gtpnbibk79j5p6np1d85r51rh.apps.googleusercontent.com"
+			});
+		gauth.then(
+		function(){
+			console.log("성공");
+			if(gauth.isSignedIn.get()){
+				console.log("로그인 됨");
+				}
+			else{
+				console.log("로그인 안 됨");
+				}
+		},
+		function(){
+			console.log("실패");
+		});
+	});
+}
+</script>
+
+<body>
+
+</body>
+
+</html>
